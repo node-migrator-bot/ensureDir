@@ -23,7 +23,7 @@ module.exports = function ensureDir(dir, mode, callback) {
 }
 
 function _ensureDir(dir, mode, callback) {
-  var existsFunction = fs.exists || path.exists;
+  var existsFunction = fs.exists || fs.exists;
 
   existsFunction(dir, function (exists) {
     if (exists) return callback(null);
